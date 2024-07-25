@@ -1,7 +1,7 @@
 -- dataset uploaded to Google BigQuery
 SELECT 
-  EXTRACT(year FROM started_at) AS year,
-  EXTRACT(month FROM started_at) AS month,
+  EXTRACT(YEAR FROM started_at) AS year,
+  EXTRACT(MONTH FROM started_at) AS month,
   COUNT(*) AS total,
   SUM(member_casual_binary) AS members, 
   COUNT(*) - SUM(member_casual_binary) AS casuals
